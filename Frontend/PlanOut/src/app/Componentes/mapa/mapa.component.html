@@ -1,0 +1,28 @@
+<div class="container mt-5">
+  <div class="input-container">
+    <mat-form-field class="input" appearance="outline">
+      <input placeholder="Origen" #intOrigin matInput />
+    </mat-form-field>
+
+    <mat-form-field class="input" appearance="outline">
+      <input placeholder="Destino" #intDest matInput />
+    </mat-form-field>
+
+    <button (click)="OnSubmit()" class="btn btn-secondary">Calcular Ruta</button>
+    <div id="tiempoViaje" *ngIf="timeDistance !== ''">
+      {{"El tiempo y la distancia es de " + timeDistance + " y " + distanceTime}}
+    </div>
+  </div>
+
+  <div class="map-container">
+    <google-map [center]="center" [zoom]="zoom" (mapClick)="moveMap($event)" (mapMousemove)="move($event)">
+      @for (position of markerPositions; track position) {
+        <map-marker [position]="position" [options]="markerOptions" />
+      }
+      <map-directions-renderer
+        *ngIf="directionsResults$ | async as directionsResults"
+        [directions]="directionsResults">
+      </map-directions-renderer>
+    </google-map>
+  </div>
+</div>

@@ -1,0 +1,105 @@
+
+a {
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
+  }
+  
+  .container-two {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 600px;
+    width: 100%;
+
+  }
+  
+  .calendar {
+    border-radius: 6px;
+    box-shadow: 0 5px 8px rgba(61, 61, 61, 0.3);
+    height: auto;
+    perspective: 1000;
+    transition: .9s;
+    transform-style: preserve-3d;
+    width: 100%;
+    border-radius: 30px;
+  background: #f3f3f3;
+  
+ 
+  }
+  
+  /* Front - Calendar */
+  .front {
+    transform: rotateY(0deg);
+  }
+  
+  .current-date {
+    border-bottom: 1px solid rgba(73, 114, 133, .6);
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+  }
+  
+  .current-date h1 {
+    color: #31485E;
+    font-size: 2em;
+    font-weight: 300;
+  }
+  
+  .week-days {
+    color:#31485E;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+    padding: 20px 30px;
+  }
+  
+  .days {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .weeks {
+    color: #31485E;
+    display: flex;
+    flex-direction: column;
+    padding: 0 40px;
+  }
+  
+  .weeks div {
+    display: flex;
+    font-size: 1.2em;
+    font-weight: 300;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 100%;
+  }
+  
+  .last-month {
+    opacity: .3;
+  }
+  
+  .weeks span {
+    padding: 10px;
+    border-radius: 50px;
+  background: #E8E9EF;
+  box-shadow:  5px 5px 10px #d8d6d6;
+  }
+  
+  .weeks span.active {
+    border-radius: 50%;
+  }
+  
+  .weeks span:not(.last-month):hover {
+    background-color: #22B86F;
+    color: #E8E9EF;
+    cursor: pointer;
+    font-weight: 600;
+  }
+  
+  .event {
+    position: relative;
+  
+  }

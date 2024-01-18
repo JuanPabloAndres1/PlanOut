@@ -1,0 +1,68 @@
+body {
+  background-color: #f8f9fa; /* Color de fondo opcional */
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  margin-left: 13%;
+}
+
+.input-container {
+  width: 200%;
+  max-width: 500px; /* Ancho máximo para los inputs */
+  margin-right: 20px; /* Espacio entre los inputs y el mapa */
+}
+
+.input {
+  width: calc(100% - 30px); /* Ajuste del ancho de los inputs */
+  margin-bottom: 15px;
+}
+
+.map-container {
+  flex: 1; /* El mapa ocupará el espacio restante */
+  max-width: 800px; /* Ancho máximo para el mapa */
+}
+
+google-map {
+  width: 100%;
+  height: 400px;
+  background-color: aliceblue;
+  border-radius: 10px;
+}
+
+button {
+  border-radius: 10px;
+  border: 1px solid #31485E;
+  background-color: #1FBA6F;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 12px 30px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: transform 80ms ease-in;
+  justify-content: left;
+  margin-bottom: 30px;
+  }
+
+  #tiempoViaje{
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+    color: #31485E;
+  }
+
+@media (max-width: 768px) {
+
+.container{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+ }

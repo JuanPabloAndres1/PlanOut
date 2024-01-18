@@ -1,0 +1,35 @@
+<div class="vid-container">
+  <div class="inner-container">
+    <div class="box">
+      <div class="text-center justify-content-center"></div>
+      <img [src]="rutaImagen" alt="logo" class="logologin">
+      <h1>Actualiza tu contraseña</h1>
+      <form [formGroup]="resetForm" (submit)="resetPassword()">
+        <input type="password" formControlName="newPassword" class="login-input" placeholder="Nueva contraseña" />
+        <input type="password" formControlName="confirmPassword" class="login-input" placeholder="Confirmar contraseña" />
+
+        <div id="requisitos"  *ngIf="showVerification && (resetForm.get('newPassword')?.hasError('minlength') || resetForm.get('confirmPassword')?.hasError('minlength'))">
+          La contraseña debe tener al menos 8 caracteres.
+        </div>
+        <div id="requisitos"  *ngIf="showVerification && (resetForm.get('newPassword')?.hasError('pattern') || resetForm.get('confirmPassword')?.hasError('pattern'))">
+          La contraseña debe contener al menos un carácter especial.
+        </div>
+        <div id="requisitos"  *ngIf="showVerification && passwordMismatch" class="error-message">
+          Las contraseñas no coinciden. Por favor, inténtalo de nuevo.
+        </div>
+
+        <div id="requisitos"  *ngIf="showVerification && changePasswordSuccess" class="success-message">
+          ¡Contraseña cambiada con éxito!
+        </div>
+
+        <div id="requisitos"  *ngIf="showVerification && changePasswordError" class="error-message">
+          {{ changePasswordError }}
+        </div>
+
+        <div class="modal-footer justify-content-center">
+          <button type="submit" class="btn btn-secondary">Enviar</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

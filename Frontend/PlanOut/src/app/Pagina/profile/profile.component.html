@@ -1,0 +1,28 @@
+<app-navbar></app-navbar>
+
+<article class="profile">
+    <div class="container profile-container text-center">
+        <i routerLink="/home"  width="200" class="face bi bi-person-circle"></i>
+        <h2 class="text-center">Perfil del Usuario</h2>
+    </div>
+
+    <div class="container mt-5">
+        <form [formGroup]="profileForm" (ngSubmit)="onSubmit()">
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" formControlName="nombre" class="form-control" [value]="user?.name">
+                    </div>
+                    <div class="form-group">
+                        <label for="Correo">Correo electrónico:</label>
+                        <input type="email" formControlName="email" class="form-control" readonly [value]="user?.email">
+                    </div>
+
+            <div class="form-group text-center">
+                <button type="submit" class="btn btn-secondary" [disabled]="!profileForm.valid">Actualizar Perfil</button>
+            </div>
+        </form>
+        </div>
+
+</article>
+
+<app-footer class="espacio"></app-footer>

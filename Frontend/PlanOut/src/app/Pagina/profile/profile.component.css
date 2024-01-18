@@ -1,0 +1,80 @@
+body{
+    background-image: url('../assets/fondosign.png');
+    background-size:30%;
+    position: relative;
+
+}
+
+.profile{
+    margin-top: 10%;
+    margin-bottom: 5%;
+
+}
+
+
+article {
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    width: 100%;
+    margin: auto;
+    font-family: 'Montserrat', sans-serif;
+    color: #31485E;
+}
+
+@media (max-width: 700px) {
+    article{
+      width:85%;
+      margin-left: 13%;
+      justify-content: center;
+      font-size: medium;
+      padding-top: 25%;
+      box-shadow: 0 0 0;
+
+    } 
+ }
+
+.profile-picture {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    border-radius: 20px;
+    border: 1px solid #31485E;
+    background-color: #1FBA6F;
+    color: #FFFFFF;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+    justify-content: center;
+}
+
+.face{
+    color: #1FBA6F;
+    font-size: 50px; 
+}

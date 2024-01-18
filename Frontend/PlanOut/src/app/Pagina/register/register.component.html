@@ -1,0 +1,43 @@
+<div class="container" id="container">
+    <div class="form-container sign-in-container">
+      <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+        <img [src]="rutaImagen" alt="logo" class="logologin">
+        <span>Regístrate o ingresa con tu correo</span>
+  
+        <!-- Nombre -->
+        <input type="text" formControlName="name" placeholder="Nombre" />
+        <div *ngIf="registerForm.controls['name'].invalid && registerForm.controls['name'].touched">
+          <div id="requisitos" *ngIf="registerForm.controls['name'].hasError('required')">El nombre es obligatorio.</div>
+        </div>
+  
+        <!-- Correo Electrónico -->
+        <input type="email" formControlName="email" placeholder="Correo" />
+      <div id="requisitos" *ngIf="registerForm.controls['email'].invalid && registerForm.controls['email'].touched">
+        <div *ngIf="registerForm.controls['email'].hasError('required')">El correo electrónico es obligatorio.</div>
+        <div *ngIf="registerForm.controls['email'].hasError('email')">Ingresa un correo electrónico válido.</div>
+        <div *ngIf="registerForm.controls['email'].hasError('dotAfterAt')">Debe haber al menos un punto después de "&#64;" en el correo.</div>
+      </div>
+  
+        <!-- Contraseña -->
+        <input type="password" formControlName="password" placeholder="Clave" />
+        <div id="requisitos" *ngIf="registerForm.controls['password'].invalid && registerForm.controls['password'].touched">
+          <div *ngIf="registerForm.controls['password'].hasError('required')">La contraseña es obligatoria.</div>
+          <div *ngIf="registerForm.controls['password'].hasError('minlength')">La contraseña debe tener al menos 8 caracteres.</div>
+          <div *ngIf="registerForm.controls['password'].hasError('invalidPassword')">
+            La contraseña debe contener al menos un carácter especial.
+          </div>
+        </div>
+  
+        <!-- Botón de Registro -->
+        <button type="submit">Regístrate</button>
+      </form>
+    </div>
+  
+    <div class="overlay-panel overlay-left">
+      <h1>¡Bienvenido!</h1>
+      <p>Si ya te has registrado, inicia sesión y disfruta al máximo de los beneficios, ¡No dejes que nada te desanime!</p>
+      <button routerLink= "/login" class="ghost" id="signIn">Inicia Sesión</button>
+    </div>
+  </div>
+  
+  <router-outlet></router-outlet>

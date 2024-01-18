@@ -1,0 +1,115 @@
+button {
+	border-radius: 20px;
+	border: 1px solid #31485E;
+	background-color: #1FBA6F;
+	color: #FFFFFF;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+	justify-content: center;
+}
+
+.icono-personalizado{
+    font-size: 50px; 
+    color: #31485E;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.nav-profile{
+  font-size: 30px; 
+  color: #31485E;
+}
+
+@font-face {
+    font-family: 'Titillium Web';
+    font-style: normal;
+    font-weight: 300;
+    src: local(''),  format('');
+  }
+  
+  .nav-profile {
+    position: absolute;
+    right: 20px;
+  }
+  
+  .fa {
+  position: relative;
+  display: table-cell;
+  width: 70px;
+  height: 36px;
+  text-align: center;
+  top:10px; 
+  font-size:20px;
+  }
+  
+  .main-menu:hover, nav.main-menu.expanded {
+  width:200px;
+  overflow:hidden;
+  opacity:1;
+  
+  }
+  
+  .main-menu {
+  margin-top: 90px;  
+  background:#F7F7F7;
+  position:fixed;
+  height: 100%;
+  width:55px;
+  overflow:hidden;
+  -webkit-transition:width .2s linear;
+  transition:width .2s linear;
+  box-shadow: 1px 0 15px rgba(0, 0, 0, 0.07);
+  opacity:1;
+  }
+  
+  .main-menu li>a {
+  
+  width:200px;
+  display:table;
+  border-collapse:collapse;
+  border-spacing:0;
+  color:#31485E;
+  font-size: 13px;
+  text-decoration:none;
+  -webkit-transition:all .14s linear;
+  transition:all .14s linear;
+  font-family: 'Strait', sans-serif;
+  border-top:0px solid #f2f2f2;
+  text-shadow: 1px 1px 1px  #fff;  
+  }
+  
+  .main-menu .nav-text  {
+  position:relative;
+  display:table-cell;
+  vertical-align:middle;
+  width:150px;
+  font-family: 'Titillium Web', sans-serif;
+  }
+  
+  
+  nav ul,nav li {
+  outline:0;
+  margin:0;
+  padding:0;
+  text-transform: uppercase;
+  }
+  
+  .main-menu li:hover>a,nav.main-menu li.active>a,.dropdown-menu>li>a:hover,.dropdown-menu>li>a:focus,.dropdown-menu>.active>a,.dropdown-menu>.active>a:hover,.dropdown-menu>.active>a:focus,.no-touch .dashboard-page nav.dashboard-menu ul li:hover a,.dashboard-page nav.dashboard-menu ul li.active a {
+  color:#fff;
+  background-color:#22B86F;
+  text-shadow: 0px 0px 0px; 
+  }
+
+  .main-menu2 {
+    padding-top: 350px;
+    }
+  
+  @media (max-width: 768px) {
+    
+  .main-menu2 {
+    padding-top: 0;
+  
+    } }

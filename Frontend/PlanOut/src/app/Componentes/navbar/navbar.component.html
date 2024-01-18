@@ -1,0 +1,83 @@
+<div class="modal fade" id="exampleModaltwo" tabindex="-1" role="dialog" >
+  <div class="modal-dialog" role="document">
+  <div class="modal-content">     <i class="bi bi-question-circle-fill text-center  icono-personalizado "></i>
+    <div class="modal-header ">
+ 
+    
+    <h5 class=" text-center container-md"> Tu opinión es fundamental para construir juntos un servicio excepcional</h5>
+    </div>
+    <div class="modal-body justify-content-center ">
+    <form>
+      <div class="form-group">
+          <label for="message-text" class="col-form-label"></label>
+          <textarea class="form-control" id="message-text"></textarea>
+        </div>
+    </form>
+    <br>
+    </div>
+    <div class="modal-footer justify-content-center ">
+    <button type="button" class="btn btn-secondary" data-dismiss="modal">Salir</button>
+    <button type="button" >Enviar</button>
+    </div>
+  </div>
+  </div>
+</div>
+
+
+<link rel="stylesheet" type="text/css" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+
+<nav class="navbar bg-body-tertiary fixed-top">
+    <div class="container">
+      <a class="navbar-brand" >
+        <img routerLink="/home"  [src]="rutaImagen"  class="logo" width="150" >
+      </a> 
+    </div>
+    <div class="nav-profile">
+      <i routerLink="/profile" alt="profile" class="bi bi-person-circle"></i>
+
+    </div>
+  </nav>
+
+<nav class="main-menu fixed-top">  
+<div class="settings">
+<ul>
+<li>                                   
+<a routerLink="/home">
+<i class="fa bi-sun-fill "></i>
+<span class="nav-text">Inicio</span>
+</a>
+</li>   
+
+<li routerLink="/calendario">                                   
+    <a >
+    <i class="fa bi bi-calendar-plus fa-lg"></i>
+    <span class="nav-text">Agenda</span>
+    </a>
+    </li>   
+       
+</ul>
+</div>
+
+<div class="main-menu2">  
+<ul >
+
+  <li>
+                                   
+    <a data-toggle="modal" data-target="#exampleModaltwo" data-whatever="@mdo"  class=" text-decoration-none">
+    <i class="fa fa-question-circle fa-lg "></i>
+    <span  class="nav-text">Reporte</span>
+    </a>
+    </li>   
+
+    
+    
+    <li>
+      <a (click)="cerrarSesion()">
+        <i class="fa fa-power-off end"></i>
+        <span class="nav-text"> Cerrar Sesión </span>
+      </a>
+  </li> 
+
+</ul>
+</div>
+</nav>

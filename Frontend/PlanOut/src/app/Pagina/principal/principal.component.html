@@ -1,0 +1,24 @@
+<div class="container" id="container">
+    <div class="form-container sign-in-container">
+        <form >
+            <img [src]="rutaImagen" alt="logo" class="logologin">
+            <h1>Planifica tu día perfecto con Nosotros: Descubre planes personalizados según el clima y tu ubicación</h1>
+            <div class="social-container">
+				<a href="#" class="social  "><i class="bi bi-brightness-high-fill heading "></i></a>
+				<a href="#" class="social"><i class="bi bi-cloud-sun-fill"></i></a>
+				<a href="#" class="social"><i class="bi bi-cloud-lightning-rain-fill"></i></a>
+			</div>
+            <p>Simplificamos la diversión. Ya sea una salida familiar, una cita romántica o un día entre amigos, te ofrecemos la clave para un momento perfecto. Nuestra plataforma te brinda planes adaptados al clima del día y tu ubicación. ¿Llueve? ¿Hace sol? ¿Frío o calor? No importa, tenemos la agenda ideal para ti. ¡Descubre la magia de disfrutar en cualquier clima con quienes más quieres!
+            </p>
+            <span>
+            <button routerLink="/login" class="register">Ven y Conócenos</button>
+        </span>
+        </form>
+    </div>
+    <div class="overlay-panel overlay-right">
+        <button routerLink="/login" type="submit">Ven y Conócenos</button>
+    </div>
+</div>
+
+<router-outlet></router-outlet>
+

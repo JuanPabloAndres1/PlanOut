@@ -1,0 +1,258 @@
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
+
+* {
+	box-sizing: border-box;
+}
+
+body {
+	background: #f6f5f7;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	font-family: 'Montserrat', sans-serif;
+	height: 100%;
+	margin: 0px;
+}
+
+.logologin {
+	width: 40%;
+    height: auto;
+
+}
+
+a {
+	color: #333;
+	font-size: 14px;
+	text-decoration: none;
+	margin: 15px 0;
+}
+
+
+.social-container {
+	margin: 20px 0;
+}
+
+.social-container a {
+	margin-top: 5px;
+	border: 1px solid #1FBA6F;
+	border-radius: 50%;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 5px;
+	height: 60px;
+	width: 60px;
+}
+
+.social:hover {
+	transform: scale(1.2); 
+	color: #31485E;
+}
+
+h1 {
+	padding-top: 20px;
+	font-weight: bold;
+	margin: 0;
+	color:#31485E;
+	font-size: 20px;
+	width: 70%;
+}
+
+p {
+	color:#31485E;
+	font-size: 14px;
+	font-weight: 100;
+	line-height: 20px;
+	letter-spacing: 0.5px;
+	margin: 3px 0 30px;
+	width: 80%;
+	font-weight:400;
+}
+
+
+a {
+	color:#1FBA6F;
+	font-size: 40px;
+	text-decoration: none;
+	margin: 15px 0;
+}
+
+button {
+	border-radius: 50px;
+	border: 1px solid #31485E;
+	background-color: #1FBA6F;
+	color: #FFFFFF;
+	font-size: 18px;
+	font-weight: bold;
+	padding: 12px 45px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	transition: transform 80ms ease-in;
+	justify-content: center;
+	margin-top: 50%;
+}
+
+button:active {
+	transform: scale(0.95);
+}
+
+button:focus {
+	outline: none;
+}
+
+button.ghost {
+	background-color: transparent;
+	border-color: #FFFFFF;
+}
+
+button:hover {
+	box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5),
+	  inset 4px 4px 6px 0 rgba(0, 0, 0, .4);
+  }
+  
+
+form {
+	background-image: url('../assets/fondo2.png');
+	background-size:110%;
+    background-position: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 50px;
+	height: 100%;
+	text-align: center;
+}
+
+
+
+.form-container {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	transition: all 0.6s ease-in-out;
+}
+
+.sign-in-container {
+	left: 0;
+	width: 50%;
+	z-index: 2;
+}
+
+.sign-up-container {
+	left: 0;
+	width: 50%;
+	opacity: 0;
+	z-index: 1;
+}
+
+.container.right-panel-active .sign-up-container {
+	transform: translateX(100%);
+	opacity: 1;
+	z-index: 5;
+	animation: show 0.6s;
+}
+
+.overlay-container {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	width: 50%;
+	height: 100%;
+	overflow: hidden;
+	transition: transform 0.6s ease-in-out;
+	z-index: 100;
+}
+
+
+.overlay-panel.overlay-right {
+    background-image: url('../assets/fondo05.png');
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.overlay {
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 0 0;
+	color: #FFFFFF;
+	position: relative;
+	left: -100%;
+	height: 100%;
+	width: 200%;
+  	transform: translateX(0);
+	transition: transform 0.6s ease-in-out;
+}
+
+.container.right-panel-active .overlay {
+  	transform: translateX(50%);
+}
+
+.overlay-panel {
+	position: absolute;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	padding: 0 40px;
+	text-align: center;
+	top: 0;
+	height: 100%;
+	width: 50%;
+	transform: translateX(0);
+	transition: transform 0.6s ease-in-out;
+}
+
+
+.overlay-right {
+	right: 0;
+	transform: translateX(0);
+}
+
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column; /* Cambia a diseño de columna en pantallas pequeñas */
+		
+    }
+
+    .form-container,
+    .overlay-panel {
+        width: 100%; /* Ancho completo en pantallas pequeñas */
+        max-width: none; /* Elimina la restricción del ancho máximo */
+    }
+}
+
+
+.register{
+	display: none;
+	margin-top: -5px;
+}
+
+@media (max-width: 600px) {
+	.register{
+		display: inline;
+	}
+}
+
+.modal {
+	margin-top: 150px;
+}
+
+.icono-personalizado{
+    font-size: 50px; 
+    color: #31485E;
+    font-family: 'Montserrat', sans-serif;
+	
+}
